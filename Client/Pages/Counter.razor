@@ -2,15 +2,22 @@
 
 <h1>Counter</h1>
 
-<p>Current count: @currentCount</p>
+<p>Current count: @_currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="DecreaseCount">Decrease</button>
+<button class="btn btn-primary" @onclick="IncrementCount">Increase</button>
 
 @code {
-    private int currentCount = 0;
+    private int _currentCount;
 
     private void IncrementCount()
     {
-        currentCount++;
+        _currentCount++;
+    }
+    
+    private void DecreaseCount()
+    {
+        if (_currentCount > 0)
+            _currentCount--;
     }
 }

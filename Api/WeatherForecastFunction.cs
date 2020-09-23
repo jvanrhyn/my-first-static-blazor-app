@@ -38,7 +38,7 @@ namespace BlazorApp.Api
             ILogger log)
         {
             var randomNumber = new Random();
-            var temp = 0;
+            int temp;
 
             var result = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
