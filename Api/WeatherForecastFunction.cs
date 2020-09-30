@@ -46,6 +46,8 @@ namespace BlazorApp.Api
                 TemperatureC = temp = randomNumber.Next(-20, 55),
                 Summary = GetSummary(temp)
             }).ToArray();
+            
+            log.LogInformation("Generated data : {data}", result);
 
             return new OkObjectResult(result);
         }
